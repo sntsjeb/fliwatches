@@ -358,28 +358,122 @@ footer {
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: radial-gradient(circle at 30% 30%, #f6e27a, #c9a94e 70%);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), inset 0 3px 6px rgba(255, 255, 255, 0.4);
+  z-index: 1000;
+  overflow: hidden;
+  position: fixed;
+}
+
+/* New Arrow Style (Elegant Chevron) */
+#backToTop::before {
+  content: "⬆";
+  /* You can swap with "⇧" or "⮝" for style */
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Shiny sweep reflection */
+#backToTop::after {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -80%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 60%);
+  transform: rotate(25deg);
+  animation: shine 5s infinite linear;
+}
+
+/* Hover Effects */
 #backToTop:hover {
-  background-color: #a88d50;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background: radial-gradient(circle at 30% 30%, #ffe792, #d4b459 70%);
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 230, 150, 0.9);
 }
 
+/* Arrow Hover Glow */
+#backToTop:hover::before {
+  transform: translateY(-4px) scale(1.2);
+  text-shadow: 0 0 10px rgba(255, 240, 180, 0.9),
+    0 0 20px rgba(255, 220, 120, 0.8);
+}
+
+/* Show button with bounce + pulse */
 #backToTop.show {
-  display: block;
-  animation: fadeIn 0.5s ease;
+  display: flex;
+  animation: bounceIn 0.7s ease, glowPulse 3s infinite ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
+/* Bounce Entrance */
+@keyframes bounceIn {
+  0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(40px) scale(0.6);
   }
 
-  to {
+  60% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-10px) scale(1.15);
+  }
+
+  80% {
+    transform: translateY(6px) scale(0.95);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
   }
 }
+
+/* Glowing Aura Pulse */
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3),
+      0 0 12px rgba(255, 215, 100, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4),
+      0 0 24px rgba(255, 215, 120, 0.9);
+  }
+}
+
+/* Shine Sweep */
+@keyframes shine {
+  0% {
+    transform: translate(-100%, -100%) rotate(25deg);
+  }
+
+  100% {
+    transform: translate(100%, 100%) rotate(25deg);
+  }
+}
+
 
 /* ==== BRAND LOGOS ==== */
 .brand-logo-text {
@@ -609,38 +703,39 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Enhanced Brand Selector */
+/* Simple Brand Selector with Arrow */
 .brand-select {
-  background: linear-gradient(145deg, #111, #1a1a1a);
-  color: #bfa46f;
+  appearance: none; /* Hide default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: #111;
+  color: #e6c87c;
   border: 1.5px solid #bfa46f;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  padding: 10px 18px;
-  border-radius: 14px;
-  text-align: center;
+  padding: 10px 40px 10px 15px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  /* Custom gold arrow (always visible) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23e6c87c' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 30px;
 }
 
+/* Hover effect – arrow stays */
 .brand-select:hover {
-  background: linear-gradient(145deg, #1a1a1a, #222);
+  background: #181818;
+  color: #ffd97a;
   border-color: #e6c87c;
-  color: #e6c87c;
-  box-shadow: 0 4px 16px rgba(191, 164, 111, 0.5);
 }
 
 .brand-select option {
-  background-color: #111;
+  background: #111;
   color: #fff;
-  font-size: 1rem;
-}
-
-.brand-select:focus {
-  outline: none;
-  box-shadow: 0 0 12px rgba(230, 200, 124, 0.8);
-  border-color: #e6c87c;
 }
 
 .view-all-wrapper {
