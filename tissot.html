@@ -103,7 +103,7 @@
 
 
     <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">↑</button>
+    <button id="backToTop" title="Go to top"> </button>
 
     <!-- Cart Script -->
     <script>
@@ -128,13 +128,17 @@
 
       const backToTopBtn = document.getElementById("backToTop");
 
-      window.addEventListener('scroll', () => {
-        backToTopBtn.style.display =
-          (document.documentElement.scrollTop > 300) ? "block" : "none";
+      window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          backToTopBtn.classList.add("show");  // Show with animation
+        } else {
+          backToTopBtn.classList.remove("show"); // Hide smoothly
+        }
       });
 
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Smooth scroll to top
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
     </script>
 
