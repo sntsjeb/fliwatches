@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Fliwatches</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4 py-3 fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">FliWatches</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">🛒 Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sliding Text Banner -->
+  <div class="text_slide right_left">
+    <div class="text_slide_content">
+      <span class="slide_heading">Fliwatches</span>
+      <span class="slide_heading">Fliwatches</span>
+    </div>
+
+    <!-- Brand Selector -->
+    <div class="container py-5">
+      <div class="d-flex justify-content-center">
+        <select class="form-select brand-select w-auto" onchange="location = this.value;">
+          <option value="casio.html" selected>CASIO</option>
+          <option value="rolex.html">ROLEX</option>
+          <option value="seiko.html">SEIKO</option>
+          <option value="omega.html">OMEGA</option>
+          <option value="tissot.html">TISSOT</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Shop Section -->
+    <div class="container my-5">
+      <div class="row gy-4">
+
+        <!-- Product Card -->
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/luxury1.jpg" alt="Casio MWD110H" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio MWD110H</h5>
+            <p class="product-price">₱3,500</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="1" data-name="Casio MWD110H" data-price="3500">Add
+              to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/luxury2.jpg" alt="Casio MWD1101" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio MWD1101</h5>
+            <p class="product-price">₱3,500</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="2" data-name="Casio MWD1101" data-price="3500">Add
+              to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/luxury3.jpg" alt="Casio MWD1102" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio MWD1102</h5>
+            <p class="product-price">₱3,500</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="3" data-name="Casio MWD1102" data-price="3500">Add
+              to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/casio4.jpg" alt="Casio MTP-B185D-7AV" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio MTP-B185D-7AV</h5>
+            <p class="product-price">₱5,940</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="4" data-name="Casio MTP-B185D-7AV"
+              data-price="5940">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/casio5.jpg" alt="Casio MTP-B185D-7BV" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio MTP-B185D-7AV</h5>
+            <p class="product-price">₱5,500</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="5" data-name="Casio MTP-B185D-7BV"
+              data-price="5500">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/casio6.jpg" alt="Casio MTP-B185D-7CV" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio MTP-B185D-7AV</h5>
+            <p class="product-price">₱7,540</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="6" data-name="Casio MTP-B185D-7CV"
+              data-price="7500">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/luxury4.jpg" alt="Casio Edifice 1" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio Edifice 1</h5>
+            <p class="product-price">₱15,940</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="7" data-name="Casio Edifice 1"
+              data-price="15940">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/luxury5.jpg" alt="Casio Edifice 2" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio Edifice 2</h5>
+            <p class="product-price">₱10,940</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="8" data-name="Casio Edifice 2"
+              data-price="10940">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="product-card w-100 shadow-sm rounded-3 p-3 text-center">
+            <img src="./images/luxury6.jpg" alt="Casio Edifice 3" class="img-fluid rounded mb-3" loading="lazy">
+            <h5 class="product-title">Casio Edifice 3</h5>
+            <p class="product-price">₱11,940</p>
+            <button class="btn btn-gold w-100 add-to-cart" data-id="9" data-name="Casio Edifice 3"
+              data-price="11940">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-white text-center py-4">
+      <div class="container">
+        <p class="mb-1">© 2023 Fliwatches. All rights reserved.</p>
+        <p>
+          <a href="https://www.facebook.com/fliwatches" target="_blank">Facebook</a>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">X</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <!-- Cart Script -->
+    <script>
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+          const { id, name, price } = button.dataset;
+          const image = button.closest('.product-card').querySelector('img').src;
+
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          const existing = cart.find(item => item.id === id);
+
+          if (existing) {
+            existing.quantity++;
+          } else {
+            cart.push({ id, name, price: parseFloat(price), quantity: 1, image });
+          }
+
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert(`${name} added to cart.`);
+        });
+      });
+
+      const backToTopBtn = document.getElementById("backToTop");
+
+      window.addEventListener('scroll', () => {
+        backToTopBtn.style.display =
+          (document.documentElement.scrollTop > 300) ? "block" : "none";
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
